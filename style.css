@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Navigation Bar */
+#navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:transparent;
+    transition:0.4s;
+    z-index:1000;
+}
+
+#navbar.scrolled{
+    background:#2c3e50;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-menu{
+    list-style:none;
+    display:flex;
+}
+
+.nav-menu li{
+    margin-left:20px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:white;
+    padding:8px 15px;
+    transition:0.3s;
+}
+
+.nav-menu a:hover{
+    background:white;
+    color:#2c3e50;
+    border-radius:5px;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#f39c12;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.hero button:hover{
+    background:#d68910;
+}
+
+/* Sections */
+.section{
+    padding:100px 50px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#f4f4f4;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:0.3s;
+}
+
+/* Services */
+#services ul{
+    text-align:center;
+    list-style:none;
+}
+
+#services li{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Contact */
+#contact{
+    background:#f4f4f4;
+    text-align:center;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    #navbar{
+        flex-direction:column;
+    }
+
+    .nav-menu{
+        flex-direction:column;
+        margin-top:10px;
+    }
+
+    .nav-menu li{
+        margin:10px 0;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+}
